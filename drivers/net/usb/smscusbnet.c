@@ -1258,7 +1258,7 @@ static void myevent(struct work_struct *work)
 		&& !dev->udev->autosuspend_disabled
 #endif
 			){
-			if((dev->idleCount >= PM_IDLE_DELAY){
+			if(dev->idleCount >= PM_IDLE_DELAY){ 
 #if (LINUX_VERSION_CODE > KERNEL_VERSION(2,6,31))
 #else
 				(dev->uintf->pm_usage_cnt > 0)){
